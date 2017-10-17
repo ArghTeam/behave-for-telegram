@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+cd ../bot-dist
+git pull $1 master
+git rm -r *
+rm -rf *
+cd ../bot
+rsync -av ./ ../bot-dist --exclude node_modules/ --exclude .env --exclude deploy --exclude README.md --exclude test/ --exclude logs/ --exclude .jshintrc
+cd ../bot-dist
+if [[ `git status --porcelain` ]]; then
+  git add -A .
+  git commit -m "Deploy"
+else
+  echo "no changes"
+fi;
+git push $1 master

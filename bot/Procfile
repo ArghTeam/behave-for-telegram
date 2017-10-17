@@ -1,0 +1,5 @@
+web: node index.js
+dev: supervisor index.js
+
+setup-deploy: rm -rf ../bot-dist && cd .. && git clone ssh://deployer@sigma.argh.team/home/deployer/repos/sentiment-bot.git bot-dist && cd bot && chmod +x deploy
+deploy: ./deploy ssh://deployer@sigma.argh.team/home/deployer/repos/sentiment-bot.git 

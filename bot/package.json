@@ -1,0 +1,32 @@
+{
+  "name": "behave-telegram-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo bot that uses Sentiment API to handle toxity of messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "PORT=3978 node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavelNartov/BehaveBot.git"
+  },
+  "author": "Pavel Nartov <pnartov@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PavelNartov/BehaveBot/issues"
+  },
+  "homepage": "https://github.com/PavelNartov/BehaveBot",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-redis": "^2.1.1",
+    "google-auth-library": "^0.10.0",
+    "needle": "^1.4.3",
+    "node-emoji": "^1.5.1",
+    "node-telegram-bot-api": "^0.25.0",
+    "redis": "^2.6.5",
+    "request": "^2.79.0",
+    "restify": "4.3.0"
+  }
+}
